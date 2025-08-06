@@ -50,4 +50,24 @@ nlp = spacy.load('en_core_web_sm')
 plt.style.use('default')
 sns.set_palette("husl")
 
+# Install Kaggle API
+%pip install kaggle
 
+#Upload kaggle.json file
+from google.colab import userdata
+userdata.get('KAGGLE_API_KEY') #used to access the secret API key for Kaggle
+
+#Set up API credentials
+!mkdir -p ~/.kaggle
+!cp kaggle.json ~/.kaggle/
+!chmod 600 ~/.kaggle/kaggle.json
+
+# Download BBC News Dataset
+!kaggle competitions download -c learn-ai-bbc
+
+# Load the dataset
+import pandas as pd
+import os
+
+# Load the main dataset
+df = pd.read_csv('BBC News Train.csv')  #filename
