@@ -1,1 +1,1 @@
-
+KAGGLE_API_KEY- Upload Kaggle.json file for API key. Click the file to retrieve API key and add it as a secret on the google collab.
