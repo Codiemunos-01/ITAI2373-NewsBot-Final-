@@ -1,24 +1,25 @@
 # NewsBot Intelligence System 2.0 
 **Student: Codie Munos**
-<br />
 <br />**Dataset:** BBC News Train.csv 
+<br />
 <br />**📊 OVERVIEW OF BBC NEWS TRAIN DATA**
-==================================================
+<br />**==================================================**
 <br />📰**Total articles:** 1490
 <br />🧠**Unique categories:** 5
 <br />🗞️**Names of Categories:** ['business', 'tech', 'politics', 'sport', 'entertainment']
-**📈 CATEGORY DISTRIBUTION**
-==================================================
-<br />Category
+<br />
+<br />**📈 CATEGORY DISTRIBUTION**
+<br />**==================================================**
+<br />Categories:
 <br />⛹️‍♂️ Sport:            346
 <br />©️ Business:         336
 <br />💼 Politics:        274
 <br />📺 Entertainment:    273
 <br />📱 Tech:             261
 <br />
-Research Summary: Text Classification Explanation Techniques
-============================================================
-📊 Multinomial Naive Bayes:
+<br />Research Summary: Text Classification Explanation Techniques
+<br />**============================================================**
+<br />📊 Multinomial Naive Bayes:
 - **Technique:** Feature Log-Probabilities (log_prob) and Log-Likelihood Ratios (feature_log_prob_).
 - **Explanation:** The log-probabilities of features given a class (feature_log_prob_) indicate how likely a feature is to appear in documents of a specific class. The difference in log-probabilities between classes can highlight features that are discriminative.
 - **Implementation (scikit-learn):** Access the `feature_log_prob_` attribute of the trained `MultinomialNB` model. This gives log probabilities P(feature | class).
