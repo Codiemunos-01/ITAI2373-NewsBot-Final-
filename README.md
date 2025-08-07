@@ -17,7 +17,7 @@
 <br />📺 Entertainment:    273
 <br />📱 Tech:             261
 <br />
-<br />Research Summary: Text Classification Explanation Techniques
+<br />**RESEARCH SUMMARY: DIFFERENT TEXT CLASSIFICATION TECHNIQUES**
 <br />**============================================================**
 <br />📊 Multinomial Naive Bayes:
 - **Technique:** Feature Log-Probabilities (log_prob) and Log-Likelihood Ratios (feature_log_prob_).
