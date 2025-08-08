@@ -71,3 +71,110 @@ import os
 
 # Load the main dataset
 df = pd.read_csv('BBC News Train.csv')  #filename
+
+# Initialize preprocessing tools
+lemmatizer = WordNetLemmatizer()
+stop_words = set(stopwords.words('english'))
+
+def clean_text(text):
+# Remove URLs
+    text = re.sub(r'http\S+|www\S+|https\S+', '', text, flags=re.MULTILINE)
+# Initialize preprocessing tools
+lemmatizer = WordNetLemmatizer()
+stop_words = set(stopwords.words('english'))
+
+def clean_text(text):
+
+
+    """
+    Comprehensive text cleaning function
+
+    """
+    if pd.isna(text):
+        return ""
+
+    # Convert to string and lowercase
+    text = str(text).lower()
+
+    # 🚀 Implement text cleaning
+    # Remove HTML tags
+    text = re.sub(r'<[^>]+>', '', text)
+
+    # Remove URLs
+    text = re.sub(r'http\S+|www\S+|https\S+', '', text, flags=re.MULTILINE)
+
+    # Remove email addresses
+    text = re.sub(r'\S+@\S+', '', text)
+
+    # Remove special characters and digits (keep only letters and spaces)
+    text = re.sub(r'[^a-zA-Z\s]', '', text)
+
+    # Remove extra whitespace
+    text = re.sub(r'\s+', ' ', text).strip()
+
+    return text
+
+def preprocess_text(text, remove_stopwords=True, lemmatize=True):
+    """
+    Complete preprocessing pipeline
+
+
+    """
+    # Clean text
+    text = clean_text(text)
+
+    if not text:
+        return ""
+
+    # Tokenize
+    tokens = word_tokenize(text)
+
+    # Remove stop words if requested
+    if remove_stopwords:
+        tokens = [token for token in tokens if token not in stop_words]
+
+    # Lemmatize if requested
+    if lemmatize:
+        tokens = [lemmatizer.lemmatize(token) for token in tokens]
+
+    # Filter out very short words
+    tokens = [token for token in tokens if len(token) > 2]
+
+    return ' '.join(tokens)
+
+# Visualize dependency parsing for a sample sentence
+  from spacy import displacy
+
+# 🎭 Advanced Sentiment 
+!pip install keybert nrclex transformers spacy nltk matplotlib --quiet
+!python -m spacy download xx_ent_wiki_sm --quiet
+import math
+import pandas as pd
+import matplotlib.pyplot as plt
+import spacy
+from keybert import KeyBERT
+from nrclex import NRCLex
+from transformers import pipeline, AutoTokenizer
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+from datetime import datetime
+from typing import List, Dict, Any, Optional
+import nltk
+nltk.download('vader_lexicon', quiet=True)
+
+**Response Generation!!!**
+import google.generativeai as genai
+import pandas as pd
+from google.colab import userdata
+
+**Topic Modeling and Content Discovery:**
+import re
+import math
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from typing import List, Dict, Any, Optional, Tuple, Union
+from sklearn.decomposition import LatentDirichletAllocation, NMF
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
+from sklearn.preprocessing import normalize
+from scipy.sparse import csr_matrix
+import networkx as nx 
