@@ -19,6 +19,10 @@
 <br /> 
 <img width="989" height="590" alt="image" src="https://github.com/user-attachments/assets/b0708046-192c-47e6-9d29-685d9a2764f7" />
 <br />
+<br /> 📝 TEXT LENGTH DISTRIBUTION
+==================================================
+<img width="989" height="590" alt="image" src="https://github.com/user-attachments/assets/30630dd9-54d9-4f22-965d-4e3ba0dc82d4" />
+<br />
 <br /> **🤖 STRUCTURE OF THE NEWS BOT PROJECT**:
 ITAI2373-NewsBot-Final/
 <br />├── README.md                    # This file
