@@ -16,6 +16,41 @@
 <br />💼 Politics:        274
 <br />📺 Entertainment:    273
 <br />📱 Tech:             261
+<br /> 
+<br /> **🤖 STRUCTURE OF THE NEWS BOT PROJECT**:
+ITAI2373-NewsBot-Final/
+<br />├── README.md                    # This file
+<br />├── requirements.txt             # Python dependencies
+<br />├── newsbot_main.py             # Main system entry point
+<br />├── config/
+<br />│   ├── settings.py             # Configuration management
+<br />│   └── api_keys_template.txt   # API key template
+<br />├── src/
+<br />│   ├── data_processing/        # Text preprocessing and validation
+<br />│   ├── analysis/               # Classification, sentiment, NER, topics
+<br />│   ├── language_models/        # Summarization and embeddings
+<br />│   ├── multilingual/           # Language detection and translation
+<br />│   ├── conversation/           # Query processing and responses
+<br />│   └── utils/                  # Visualization, evaluation, export
+<br />├── data/
+<br />│   ├── raw/                    # Original BBC News dataset
+<br />│   ├── processed/              # Cleaned and prepared data
+<br />│   ├── models/                 # Trained model files
+<br />│   └── results/                # Analysis outputs
+<br />├── notebooks/
+<br />│   ├── 01_Data_Exploration.ipynb
+<br />│   ├── 02_Advanced_Classification.ipynb
+<br />│   ├── 03_Topic_Modeling.ipynb
+<br />│   ├── 04_Language_Models.ipynb
+<br />│   ├── 05_Multilingual_Analysis.ipynb
+<br />│   ├── 06_Conversational_Interface.ipynb
+<br />│   └── 07_System_Integration.ipynb
+<br />├── tests/                      # Comprehensive test suite
+<br />├── docs/                       # Complete documentation
+<br />└── reports/                    # Executive summary and reports
+
+
+
 <br />
 <br />**RESEARCH SUMMARY: DIFFERENT TEXT CLASSIFICATION TECHNIQUES**
 <br />**============================================================**
