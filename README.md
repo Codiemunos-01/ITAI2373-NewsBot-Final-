@@ -97,8 +97,8 @@ ITAI2373-NewsBot-Final/
 ========================================================
 
 📋 Classification Report:
-               precision    recall  f1-score   support
 
+             **precision    recall  f1-score   support**
      business       0.94      0.97      0.96        67
     entertainment       1.00      1.00      1.00        55
      politics       0.96      0.96      0.96        55
