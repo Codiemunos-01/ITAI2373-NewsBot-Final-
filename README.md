@@ -3,13 +3,13 @@
 <br />**Dataset:** BBC News Train.csv 
 <br />
 <br />**📊 OVERVIEW OF BBC NEWS TRAIN DATA**
-<br />**==================================================**
+<br />**=============================================**
 <br />📰**Total articles:** 1490
 <br />🧠**Unique categories:** 5
 <br />🗞️**Names of Categories:** ['business', 'tech', 'politics', 'sport', 'entertainment']
 <br />
 <br />**📈 CATEGORY DISTRIBUTION**
-<br />**==================================================**
+<br />**==============================================**
 <br />Categories:
 <br />⛹️‍♂️ Sport:            346
 <br />©️ Business:         336
@@ -20,7 +20,7 @@
 <img width="989" height="590" alt="image" src="https://github.com/user-attachments/assets/b0708046-192c-47e6-9d29-685d9a2764f7" />
 <br />
 <br /> 📝 TEXT LENGTH DISTRIBUTION
-==================================================
+==============================================
 <img width="989" height="590" alt="image" src="https://github.com/user-attachments/assets/30630dd9-54d9-4f22-965d-4e3ba0dc82d4" />
 <br />
 <br /> **🤖 STRUCTURE OF THE NEWS BOT PROJECT**:
@@ -58,12 +58,47 @@ ITAI2373-NewsBot-Final/
 
 
 <br />
+<br /> **PREPROCESSING RESULTS**
+<br />🧹 Preprocessing all articles...
+<br />✅ Preprocessing complete!
+
+<br />📝 BEFORE AND AFTER EXAMPLES
+<br />========================================================
+
+<br />Example 1:
+<br />Original: worldcom ex-boss launches defence lawyers defending former worldcom chieF bernie ebbers against a ba...
+<br />Processed: worldcom exboss launch defence lawyer defending former worldcom chief bernie ebbers battery fraud ch...
+
+<br />Example 2:
+<br />Original: german business confidence slides german business confidence fell in february knocking hopes of a sp...
+<br />Processed: german business confidence slide german business confidence fell february knocking hope speedy recov...
+
+<br />Example 3:
+<br />Original: bbc poll indicates economic gloom citizens in a majority of nations surveyed in a bbc world service ...
+<br />Processed: bbc poll indicates economic gloom citizen majority nation surveyed bbc world service poll believe wo...
+
+<br />Average original text length: 2233.46
+<br />Average processed text length: 1481.36
+<br />Unique words in original text: 35594
+<br />Unique words in processed text: 22486
+
+<br />🔥 Most common words after preprocessing:
+<br />  said: 4838
+<br />  year: 1872
+<br />  would: 1711
+<br />also: 1426
+<br /> new: 1334 <br /> people: 1323
+<br /> one: 1190
+<br />  could: 1032
+<br />  game: 949
+<br /> time: 940
+<br />
 <br />**RESEARCH SUMMARY: DIFFERENT TEXT CLASSIFICATION TECHNIQUES**
-<br />**============================================================**
+<br />**========================================================**
 <br />📊 Multinomial Naive Bayes:
-- **Technique:** Feature Log-Probabilities (log_prob) and Log-Likelihood Ratios (feature_log_prob_).
-- **Explanation:** The log-probabilities of features given a class (feature_log_prob_) indicate how likely a feature is to appear in documents of a specific class. The difference in log-probabilities between classes can highlight features that are discriminative.
-- **Implementation (scikit-learn):** Access the `feature_log_prob_` attribute of the trained `MultinomialNB` model. This gives log probabilities P(feature | class).
+<br />- **Technique:** Feature Log-Probabilities (log_prob) and Log-Likelihood Ratios (feature_log_prob_).
+-<br /> **Explanation:** The log-probabilities of features given a class (feature_log_prob_) indicate how likely a feature is to appear in documents of a specific class. The difference in log-probabilities between classes can highlight features that are discriminative.
+<br />- **Implementation (scikit-learn):** Access the `feature_log_prob_` attribute of the trained `MultinomialNB` model. This gives log probabilities P(feature | class).
 - **Pros:** Simple, directly available from the model, computationally efficient.
 - **Cons:** Assumes feature independence (Naive Bayes assumption), explanation is based on feature presence/absence, not interaction.
 
