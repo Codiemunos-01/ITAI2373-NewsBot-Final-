@@ -1,1 +1,127 @@
+# Initialize preprocessing tools
+lemmatizer = WordNetLemmatizer()
+stop_words = set(stopwords.words('english'))
 
+def clean_text(text):
+
+
+    """
+    Comprehensive text cleaning function
+
+    """
+    if pd.isna(text):
+        return ""
+
+    # Convert to string and lowercase
+    text = str(text).lower()
+
+    # 🚀 Implement text cleaning
+    # Remove HTML tags
+    text = re.sub(r'<[^>]+>', '', text)
+
+    # Remove URLs
+    text = re.sub(r'http\S+|www\S+|https\S+', '', text, flags=re.MULTILINE)
+
+    # Remove email addresses
+    text = re.sub(r'\S+@\S+', '', text)
+
+    # Remove special characters and digits (keep only letters and spaces)
+    text = re.sub(r'[^a-zA-Z\s]', '', text)
+
+    # Remove extra whitespace
+    text = re.sub(r'\s+', ' ', text).strip()
+
+    return text
+
+def preprocess_text(text, remove_stopwords=True, lemmatize=True):
+    """
+    Complete preprocessing pipeline
+
+
+    """
+    # Clean text
+    text = clean_text(text)
+
+    if not text:
+        return ""
+
+    # 🚀 Implement tokenization and preprocessing
+    # Tokenize
+    tokens = word_tokenize(text)
+
+    # Remove stop words if requested
+    if remove_stopwords:
+        tokens = [token for token in tokens if token not in stop_words]
+
+    # Lemmatize if requested
+    if lemmatize:
+        tokens = [lemmatizer.lemmatize(token) for token in tokens]
+
+    # Filter out very short words
+    tokens = [token for token in tokens if len(token) > 2]
+
+    return ' '.join(tokens)
+
+# Test the preprocessing function
+sample_text = "bbc poll indicates economic gloom citizens in a majority of nations surveyed in a bbc world service ..."
+print("Original text:")
+print(sample_text)
+
+# Apply preprocessing to the dataset
+print("🧹 Preprocessing all articles...")
+
+# Create new columns for processed text
+df['text_clean'] = df['Text'].apply(clean_text)
+df['text_processed'] = df['Text'].apply(preprocess_text)
+
+# Combine title and content for full article analysis
+df['full_text'] = df['Text'].fillna('')
+df['full_text_processed'] = df['text_processed']
+
+print("✅ Preprocessing complete!")
+
+# Show before and after examples
+print("\n📝 BEFORE AND AFTER EXAMPLES")
+print("=" * 60)
+for i in range(min(3, len(df))):
+    print(f"\nExample {i+1}:")
+    print(f"Original: {df.iloc[i]['full_text'][:100]}...")
+    print(f"Processed: {df.iloc[i]['full_text_processed'][:100]}...")
+
+#Calculate average text length before and after
+df['original_text_length'] = df['full_text'].str.len()
+df['processed_text_length'] = df['full_text_processed'].str.len()
+
+#Visualize text length before and after
+plt.figure(figsize=(10,5))
+sns.histplot(df['original_text_length'], bins=50, kde=True, label='Original', color='blue')
+sns.histplot(df['processed_text_length'], bins=50, kde=True, label='Processed', color='green')
+plt.title('Distribution of Text Lengths')
+plt.xlabel('Text Length')
+plt.ylabel('Frequency')
+plt.legend()
+plt.tight_layout()
+plt.show()
+print(f"Average original text length: {df['original_text_length'].mean():.2f}")
+print(f"Average processed text length: {df['processed_text_length'].mean():.2f}")
+
+#Count unique words before and after
+unique_words_original = set(' '.join(df['full_text']).split())
+unique_words_processed = set(' '.join(df['full_text_processed']).split())
+
+#Identify the most common words after preprocessing
+processed_words_list = ' '.join(df['full_text_processed']).split()
+most_common_processed_words = Counter(processed_words_list).most_common(10)
+
+
+print(f"Unique words in original text: {len(unique_words_original)}")
+print(f"Unique words in processed text: {len(unique_words_processed)}")
+
+# most common words after preprocessing
+print("\n🔥 Most common words after preprocessing:")
+for word, count in most_common_processed_words:
+    print(f"  {word}: {count}")
+print("\nCleaned text:")
+print(clean_text(sample_text))
+print("\nFully preprocessed text:")
+print(preprocess_text(sample_text))
