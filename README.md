@@ -17,6 +17,8 @@
 <br />📺 Entertainment:    273
 <br />📱 Tech:             261
 <br /> 
+<img width="989" height="590" alt="image" src="https://github.com/user-attachments/assets/b0708046-192c-47e6-9d29-685d9a2764f7" />
+<br />
 <br /> **🤖 STRUCTURE OF THE NEWS BOT PROJECT**:
 ITAI2373-NewsBot-Final/
 <br />├── README.md                    # This file
