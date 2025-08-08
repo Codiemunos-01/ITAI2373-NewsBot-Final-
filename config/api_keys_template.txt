@@ -1,1 +1,2 @@
-KAGGLE_API_KEY- Upload Kaggle.json file for API key. Click the file to retrieve API key and add it as a secret on the google collab.
+<br />KAGGLE_API_KEY- Upload Kaggle.json file for API key. Click the file to retrieve API key and add it as a secret on the google collab.
+<br />GOOGLE_API_KEY - Go to Google Ai Studio and create an account. You will need to go to settings to retrieve the API credentials and directly save them into your notebook.
