@@ -93,6 +93,24 @@ ITAI2373-NewsBot-Final/
 <br />  game: 949
 <br /> time: 940
 <br />
+<br />📊 DETAILED EVALUATION: Naive Bayes
+========================================================
+
+📋 Classification Report:
+               precision    recall  f1-score   support
+
+     business       0.94      0.97      0.96        67
+    entertainment       1.00      1.00      1.00        55
+     politics       0.96      0.96      0.96        55
+        sport       1.00      1.00      1.00        69
+         tech       0.98      0.94      0.96        52
+
+     accuracy                           0.98       298
+    macro avg       0.98      0.98      0.98       298
+     weighted avg       0.98      0.98      0.98       298
+
+<img width="913" height="790" alt="image" src="https://github.com/user-attachments/assets/a7a6dff0-32d9-4345-8367-955017247ef9" />
+
 <br />**RESEARCH SUMMARY: DIFFERENT TEXT CLASSIFICATION TECHNIQUES**
 <br />**========================================================**
 <br />📊 Multinomial Naive Bayes:
