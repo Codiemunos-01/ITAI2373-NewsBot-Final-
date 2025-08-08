@@ -141,3 +141,9 @@ Key Considerations for Text Classification:
 - **Model Complexity:** Simple models like Naive Bayes have inherently interpretable components. Complex models benefit more from model-agnostic methods.
 - **Explanation Scope:** Do you need global explanations (overall feature importance) or local explanations (why a specific article was classified in a certain way)?
 - **Computational Cost:** LIME and SHAP can add significant overhead, especially when explaining many predictions.
+
+<br />📊 NAMED ENTITY ANALYSIS
+================================================
+<img width="1489" height="1190" alt="image" src="https://github.com/user-attachments/assets/8506db5f-fc3d-4518-ad92-b00a53826aeb" />
+
+  
