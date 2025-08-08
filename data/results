@@ -1,1 +1,34 @@
+🧹 Preprocessing all articles...
+✅ Preprocessing complete!
 
+📝 BEFORE AND AFTER EXAMPLES
+============================================================
+
+Example 1:
+Original: worldcom ex-boss launches defence lawyers defending former worldcom chief bernie ebbers against a ba...
+Processed: worldcom exboss launch defence lawyer defending former worldcom chief bernie ebbers battery fraud ch...
+
+Example 2:
+Original: german business confidence slides german business confidence fell in february knocking hopes of a sp...
+Processed: german business confidence slide german business confidence fell february knocking hope speedy recov...
+
+Example 3:
+Original: bbc poll indicates economic gloom citizens in a majority of nations surveyed in a bbc world service ...
+Processed: bbc poll indicates economic gloom citizen majority nation surveyed bbc world service poll believe wo...
+
+Average original text length: 2233.46
+Average processed text length: 1481.36
+Unique words in original text: 35594
+Unique words in processed text: 22486
+
+🔥 Most common words after preprocessing:
+  said: 4838
+  year: 1872
+  would: 1711
+  also: 1426
+  new: 1334
+  people: 1323
+  one: 1190
+  could: 1032
+  game: 949
+  time: 940
