@@ -1,1 +1,44 @@
+# Import all necessary libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from wordcloud import WordCloud
+import plotly.express as px
+import plotly.graph_objects as go
+from collections import Counter, defaultdict
+import re
+import warnings
+warnings.filterwarnings('ignore')
 
+# NLP Libraries
+import spacy
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize, sent_tokenize
+from nltk.stem import WordNetLemmatizer
+from nltk.sentiment import SentimentIntensityAnalyzer
+from nltk.tag import pos_tag
+
+# Scikit-learn for machine learning
+from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
+from sklearn.model_selection import train_test_split, cross_val_score
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.svm import SVC
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+from sklearn.pipeline import Pipeline
+from sklearn.ensemble import RandomForestClassifier
+from transformers import pipeline
+
+# Load spaCy model
+nlp = spacy.load('en_core_web_sm')
+
+# Set up plotting style
+plt.style.use('default')
+sns.set_palette("husl")
+
+
+
+print("📚 All libraries imported successfully!")
+print(f"🔧 spaCy model loaded: {nlp.meta['name']} v{nlp.meta['version']}")
